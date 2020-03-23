@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+       <record id="res_partner_bank_emta_seb" model="res.partner.bank">
+            <field name="name">/</field>
+            <field name="country_id" ref="base.ee"/>
+            <field name="owner_name">Maksu- ja Tolliamet</field>
+            <field name="footer" eval="0"/>
+            <field name="bank_name">seb</field>
+            <field name="state">iban</field>
+            <field name="bank_bic">EEUHEE2XXXX</field>
+            <field name="partner_id" ref="res_partner_emta"/>
+            <field name="bank" ref="res_bank_seb"/>
+            <field name="acc_number">EE351010052031000004</field>
+            <field name="sanitized_acc_number">EE351010052031000004</field>
+       </record>
+
+       <record id="res_partner_bank_emta_swed1" model="res.partner.bank">
+            <field name="name">/</field>
+            <field name="country_id" ref="base.ee"/>
+            <field name="owner_name">Maksu- ja Tolliamet</field>
+            <field name="footer" eval="0"/>
+            <field name="bank_name">swedbank</field>
+            <field name="state">iban</field>
+            <field name="bank_bic">HABAEE2XXXX</field>
+            <field name="partner_id" ref="res_partner_emta"/>
+            <field name="bank" ref="res_bank_swedbank"/>
+            <field name="acc_number">EE522200221013264447</field>
+            <field name="sanitized_acc_number">EE522200221013264447</field>
+       </record>
+
+       <record id="res_partner_bank_emta_swed2" model="res.partner.bank">
+            <field name="name">/</field>
+            <field name="country_id" ref="base.ee"/>
+            <field name="owner_name">Maksu- ja Tolliamet</field>
+            <field name="footer" eval="0"/>
+            <field name="bank_name">swedbank</field>
+            <field name="state">iban</field>
+            <field name="bank_bic">HABAEE2XXXX</field>
+            <field name="partner_id" ref="res_partner_emta"/>
+            <field name="bank" ref="res_bank_swedbank"/>
+            <field name="acc_number">EE502200221014193355</field>
+            <field name="sanitized_acc_number">EE502200221014193355</field>
+       </record>
+
+       <record id="res_partner_bank_emta_nordea" model="res.partner.bank">
+            <field name="name">/</field>
+            <field name="country_id" ref="base.ee"/>
+            <field name="owner_name">Maksu- ja Tolliamet</field>
+            <field name="footer" eval="0"/>
+            <field name="bank_name">nordea</field>
+            <field name="state">iban</field>
+            <field name="bank_bic">NDEAEE2XXXX</field>
+            <field name="partner_id" ref="res_partner_emta"/>
+            <field name="bank" ref="res_bank_nordea"/>
+            <field name="acc_number">EE401700017002872300</field>
+            <field name="sanitized_acc_number">EE401700017002872300</field>
+       </record>
+
+       <record id="res_partner_bank_emta_danske" model="res.partner.bank">
+            <field name="name">/</field>
+            <field name="country_id" ref="base.ee"/>
+            <field name="owner_name">Maksu- ja Tolliamet</field>
+            <field name="footer" eval="0"/>
+            <field name="bank_name">danske</field>
+            <field name="state">iban</field>
+            <field name="bank_bic">FOREEE2XXXX</field>
+            <field name="partner_id" ref="res_partner_emta"/>
+            <field name="bank" ref="res_bank_danske"/>
+            <field name="acc_number">EE873300333499990003</field>
+            <field name="sanitized_acc_number">EE873300333499990003</field>
+       </record>
+
+    </data>
+</openerp>

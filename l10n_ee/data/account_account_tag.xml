@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+	<data noupdate="1">
+		<record id="account_tag_ee_2" model="account.account.tag">
+			<field name="name">Finantsinvesteeringud</field>
+		</record>
+		<record id="account_tag_ee_3" model="account.account.tag">
+			<field name="name">Nõuded ostjate vastu</field>
+		</record>
+		<record id="account_tag_ee_4" model="account.account.tag">
+			<field name="name">Nõuded seotud osapoolte vastu</field>
+		</record>
+		<record id="account_tag_ee_5" model="account.account.tag">
+			<field name="name">Muud nõuded</field>
+		</record>
+		<record id="account_tag_ee_6" model="account.account.tag">
+			<field name="name">Maksude ettemaksed ja tagasinõuded</field>
+		</record>
+		<record id="account_tag_ee_7" model="account.account.tag">
+			<field name="name">Ettemaksed (nõuete kontole)</field>
+		</record>
+		<record id="account_tag_ee_8" model="account.account.tag">
+			<field name="name">Tooraine ja materjal</field>
+		</record>
+		<record id="account_tag_ee_9" model="account.account.tag">
+			<field name="name">Lõpetamata toodang</field>
+		</record>
+		<record id="account_tag_ee_10" model="account.account.tag">
+			<field name="name">Valmistoodang</field>
+		</record>
+		<record id="account_tag_ee_11" model="account.account.tag">
+			<field name="name">Müügiks ostetud kaubad</field>
+		</record>
+		<record id="account_tag_ee_12" model="account.account.tag">
+			<field name="name">Muud nõuded (pikaajalised)</field>
+		</record>
+		<record id="account_tag_ee_13" model="account.account.tag">
+			<field name="name">Kinnisvarainvesteeringud (soetusmaksumus) </field>
+		</record>
+		<record id="account_tag_ee_14" model="account.account.tag">
+			<field name="name">Materiaalsed varad (soetusmaksumus)</field>
+		</record>
+		<record id="account_tag_ee_15" model="account.account.tag">
+			<field name="name">Immateriaalsed põhivarad (soetusmaksumus) </field>
+		</record>
+		<record id="account_tag_ee_16" model="account.account.tag">
+			<field name="name">Kinnisvarainvesteeringud (akumuleeritud kulum) </field>
+		</record>
+		<record id="account_tag_ee_17" model="account.account.tag">
+			<field name="name">Materiaalsed varad (akumuleeritud kulum)</field>
+		</record>
+		<record id="account_tag_ee_18" model="account.account.tag">
+			<field name="name">Immateriaalsed põhivarad (akumuleeritud kulum) </field>
+		</record>
+		<record id="account_tag_ee_19" model="account.account.tag">
+			<field name="name">Muud saadud ettemaksed</field>
+		</record>
+		<record id="account_tag_ee_20" model="account.account.tag">
+			<field name="name">Laenukohustised (lühiajalised)</field>
+		</record>
+		<record id="account_tag_ee_21" model="account.account.tag">
+			<field name="name">Laenukohustised (pikaajalised)</field>
+		</record>
+		<record id="account_tag_ee_22" model="account.account.tag">
+			<field name="name">Võlad tarnijatele</field>
+		</record>
+		<record id="account_tag_ee_23" model="account.account.tag">
+			<field name="name">Muud võlad</field>
+		</record>
+		<record id="account_tag_ee_24" model="account.account.tag">
+			<field name="name">Maksuvõlad</field>
+		</record>
+		<record id="account_tag_ee_25" model="account.account.tag">
+			<field name="name">Võlad töövõtjatele</field>
+		</record>
+		<record id="account_tag_ee_26" model="account.account.tag">
+			<field name="name">Muud eraldised (lühiajalised)</field>
+		</record>
+		<record id="account_tag_ee_27" model="account.account.tag">
+			<field name="name">Muud eraldised (pikaajalised)</field>
+		</record>
+		<record id="account_tag_ee_28" model="account.account.tag">
+			<field name="name">Aktsiakapital või osakapital nimiväärtuses</field>
+		</record>
+		<record id="account_tag_ee_29" model="account.account.tag">
+			<field name="name">Ülekurss</field>
+		</record>
+		<record id="account_tag_ee_30" model="account.account.tag">
+			<field name="name">Oma osad või aktsiad (miinus)</field>
+		</record>
+		<record id="account_tag_ee_31" model="account.account.tag">
+			<field name="name">Kohustuslik reservkapital</field>
+		</record>
+		<record id="account_tag_ee_32" model="account.account.tag">
+			<field name="name">Muud reservid</field>
+		</record>
+		<record id="account_tag_ee_33" model="account.account.tag">
+			<field name="name">Eelmiste perioodide jaotamata kasum (kahjum)</field>
+		</record>
+		<record id="account_tag_ee_34" model="account.account.tag">
+			<field name="name">Müügitulu (skeem 1)</field>
+		</record>
+		<record id="account_tag_ee_35" model="account.account.tag">
+			<field name="name">Muud äritulud (skeem 1)</field>
+		</record>
+		<record id="account_tag_ee_36" model="account.account.tag">
+			<field name="name">Valmis- ja lõpetamata toodangu varude jääkide muutus</field>
+		</record>
+		<record id="account_tag_ee_37" model="account.account.tag">
+			<field name="name">Kaubad, toore, materjal ja teenused</field>
+		</record>
+		<record id="account_tag_ee_38" model="account.account.tag">
+			<field name="name">Mitmesugused tegevuskulud (skeem 1)</field>
+		</record>
+		<record id="account_tag_ee_39" model="account.account.tag">
+			<field name="name">Tööjõukulud (skeem 1)</field>
+		</record>
+		<record id="account_tag_ee_40" model="account.account.tag">
+			<field name="name">Põhivarade kulum ja väärtuse langus</field>
+		</record>
+		<record id="account_tag_ee_41" model="account.account.tag">
+			<field name="name">Muud ärikulud (skeem 1)</field>
+		</record>
+		<record id="account_tag_ee_42" model="account.account.tag">
+			<field name="name">finantstulud ja -kulud tütarettevõtjate aktsiatelt ja osadelt</field>
+		</record>
+		<record id="account_tag_ee_43" model="account.account.tag">
+			<field name="name">finantstulud ja -kulud sidusettevõtjate aktsiatelt ja osadelt</field>
+		</record>
+		<record id="account_tag_ee_44" model="account.account.tag">
+			<field name="name">finantstulud ja -kulud muudelt pikaajalistelt finantsinvesteeringutelt</field>
+		</record>
+		<record id="account_tag_ee_45" model="account.account.tag">
+			<field name="name">Intressikulud</field>
+		</record>
+		<record id="account_tag_ee_46" model="account.account.tag">
+			<field name="name">Intressitulud</field>
+		</record>
+		<record id="account_tag_ee_47" model="account.account.tag">
+			<field name="name">kasum (kahjum) valuutakursi muutustest</field>
+		</record>
+		<record id="account_tag_ee_48" model="account.account.tag">
+			<field name="name">muud finantstulud ja -kulud</field>
+		</record>
+		<record id="account_tag_ee_49" model="account.account.tag">
+			<field name="name">Tulumaks</field>
+		</record>
+	</data>
+</odoo>

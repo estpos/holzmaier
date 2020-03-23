@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="account_reports_ee_statements_menu"
+                  name="Aruanded"
+                  parent="account.menu_finance_reports"
+                  sequence="0"
+                  groups="account.group_account_user" />
+
+        <menuitem id="action_account_chart_template_menu"
+                  name="Chart Of Accounts"
+                  parent="account.menu_finance_configuration"
+                  sequence="200"
+                  groups="base.group_no_one" />
+    </data>
+</odoo>

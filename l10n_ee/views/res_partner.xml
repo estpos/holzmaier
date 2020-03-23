@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_partner_form_l10n_ee" model="ir.ui.view">
+            <field name="name">res.partner.l10n_ee</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/field[@name='title']" position="after">
+                    <field name="reg_number"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

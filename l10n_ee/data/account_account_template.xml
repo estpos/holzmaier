@@ -1,0 +1,1593 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+	<data noupdate="1">
+		<record id="chart1010" model="account.account.template">
+            <field name="code">1010</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="name">Kassa</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+        </record>
+        <record id="chart1020" model="account.account.template">
+            <field name="code">1020</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="name">Pank</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+        </record>
+        <record id="chart1110" model="account.account.template">
+            <field name="code">1110</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Väärtpaberid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_2')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1210" model="account.account.template">
+            <field name="code">1210</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="name">Ostjate tasumata arved</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_3')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1290" model="account.account.template">
+            <field name="code">1290</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="name">Ebatõenäoliselt laekuvad arved</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_3')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1310" model="account.account.template">
+            <field name="code">1310</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="name">Nõuded emaettevõtja ja teiste grupi ettevõtjate vastu</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_4')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1320" model="account.account.template">
+            <field name="code">1320</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="name">Nõuded sidusettevõtjate vastu </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_4')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1330" model="account.account.template">
+            <field name="code">1330</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="name">Nõuded omanike vastu</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_4')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1340" model="account.account.template">
+            <field name="code">1340</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Muud lühiajalised nõuded</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_5')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1410" model="account.account.template">
+            <field name="code">1410</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Intressid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_5')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1420" model="account.account.template">
+            <field name="code">1420</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Väärtpaberite dividendinõuded</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_5')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1430" model="account.account.template">
+            <field name="code">1430</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Muud viitlaekumised</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_5')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1511" model="account.account.template">
+            <field name="code">1511</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Sisendkäibemaks, teenuse importimisel tasumisele kuuluv</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+        </record>
+        <record id="chart1513" model="account.account.template">
+            <field name="code">1513</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Tollis impordilt tasutud käibemaks</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+        </record>
+        <record id="chart1520" model="account.account.template">
+            <field name="code">1520</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Maksude ettemaksukonto</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_6')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1530" model="account.account.template">
+            <field name="code">1530</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Ettemakstud tulevaste perioodide kulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_7')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1610" model="account.account.template">
+            <field name="code">1610</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Tooraine ja materjal</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_8')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1620" model="account.account.template">
+            <field name="code">1620</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Lõpetamata toodang</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_9')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1630" model="account.account.template">
+            <field name="code">1630</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Valmistoodang</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_10')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1640" model="account.account.template">
+            <field name="code">1640</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Müügiks ostetud kaubad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_11')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1650" model="account.account.template">
+            <field name="code">1650</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_prepayments"/>
+            <field name="name">Ettemaksed tarnijatele </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+        </record>
+        <record id="chart1710" model="account.account.template">
+            <field name="code">1710</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="name">Tütarettevõtjate aktsiad ja osad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_12')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1720" model="account.account.template">
+            <field name="code">1720</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="name">Pikaajalised nõuded ema- ja teiste grupi ettevõtjate vastu</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_12')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1730" model="account.account.template">
+            <field name="code">1730</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="name">Sidusettevõtjate aktsiad ja osad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_12')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1740" model="account.account.template">
+            <field name="code">1740</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="name">Pikaajalised nõuded sidusettevõtjate vastu</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_12')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1750" model="account.account.template">
+            <field name="code">1750</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="name">Muud aktsiad ja väärtpaberid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_12')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1760" model="account.account.template">
+            <field name="code">1760</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="name">Mitmesugused pikaajalised nõuded</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_12')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1800" model="account.account.template">
+            <field name="code">1800</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Kinnisvarainvesteeringud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_13')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1810" model="account.account.template">
+            <field name="code">1810</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Maa</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_14')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1815" model="account.account.template">
+            <field name="code">1815</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Ehitised</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_14')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1820" model="account.account.template">
+            <field name="code">1820</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Masinad ja seadmed</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_14')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1825" model="account.account.template">
+            <field name="code">1825</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Immateriaalne vara</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_15')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1830" model="account.account.template">
+            <field name="code">1830</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Muu materiaalne põhivara</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_14')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1840" model="account.account.template">
+            <field name="code">1840</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Kulum kinnisvara investeeringud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_16')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1841" model="account.account.template">
+            <field name="code">1841</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Kulum ehitised</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_17')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1842" model="account.account.template">
+            <field name="code">1842</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Kulum masinad ja seadmed</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_17')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1843" model="account.account.template">
+            <field name="code">1843</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Kulum muu materiaalne põhivara</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_17')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1844" model="account.account.template">
+            <field name="code">1844</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Kulum immateriaalne vara</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_18')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1850" model="account.account.template">
+            <field name="code">1850</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Lõpetamata ehitised</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_14')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1860" model="account.account.template">
+            <field name="code">1860</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Ettemaksed materiaalse põhivara eest</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_14')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1910" model="account.account.template">
+            <field name="code">1910</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Arenguväljaminekud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_14')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1920" model="account.account.template">
+            <field name="code">1920</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Patendid, litsentsid, kaubamärgid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_15')])]" name="tag_ids"/>
+        </record>
+        <record id="chart1940" model="account.account.template">
+            <field name="code">1940</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="name">Ettemaksed immateriaalse põhivara eest</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_19')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2110" model="account.account.template">
+            <field name="code">2110</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Lühiajalised laenud ja võlakirjad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_20')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2120" model="account.account.template">
+            <field name="code">2120</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="name">Pikaajalise võlakohustuse tagasimaksed järgm.perioodil</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_21')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2130" model="account.account.template">
+            <field name="code">2130</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="name">Pikaajalise kapitalirendi tagasimaksed järgm.perioodil</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_21')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2210" model="account.account.template">
+            <field name="code">2210</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="name">Ostjate ettemaksed</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_19')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2310" model="account.account.template">
+            <field name="code">2310</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="name">Võlad tarnijatele </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_22')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2410" model="account.account.template">
+            <field name="code">2410</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="name">Võlad emaattevõtjale ja teistele grupi ettevõtjatele </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_22')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2420" model="account.account.template">
+            <field name="code">2420</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="name">Võlad siduettevõtjatele </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_22')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2430" model="account.account.template">
+            <field name="code">2430</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Muud lühiajalised võlad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_23')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2510" model="account.account.template">
+            <field name="code">2510</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Käibemaks</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2519" model="account.account.template">
+            <field name="code">2519</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Käibemaksu intressivõlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2520" model="account.account.template">
+            <field name="code">2520</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Isiku tulumaksu võlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2521" model="account.account.template">
+            <field name="code">2521</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Isiku tulumaksu viitvõlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2529" model="account.account.template">
+            <field name="code">2529</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Isiku tulumaksu intressivõlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2530" model="account.account.template">
+            <field name="code">2530</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Töötuskindlustusmaks</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2531" model="account.account.template">
+            <field name="code">2531</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Töötuskindlustusmaksu viitvõlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2539" model="account.account.template">
+            <field name="code">2539</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Töötuskindlustusmaksu intressivõlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2540" model="account.account.template">
+            <field name="code">2540</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Kogumispensioni maksed</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2541" model="account.account.template">
+            <field name="code">2541</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Kogumispensioni viitvõlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2549" model="account.account.template">
+            <field name="code">2549</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Kogumispensioni makste intressivõlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2550" model="account.account.template">
+            <field name="code">2550</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Sotsiaalmaksu võlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2551" model="account.account.template">
+            <field name="code">2551</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Sotsiaalmaksu viitvõlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2559" model="account.account.template">
+            <field name="code">2559</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Sotsiaalmaksu intressivõlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2580" model="account.account.template">
+            <field name="code">2580</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Maamaks</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2589" model="account.account.template">
+            <field name="code">2589</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Maamaksu intressivõlg</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_24')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2610" model="account.account.template">
+            <field name="code">2610</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="name">Võlad töövõtjatele</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_25')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2612" model="account.account.template">
+            <field name="code">2612</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Puhkusereserv</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_23')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2630" model="account.account.template">
+            <field name="code">2630</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="name">Võlad aruandvatele isikutele</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_23')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2650" model="account.account.template">
+            <field name="code">2650</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Dividendivõlad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_23')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2660" model="account.account.template">
+            <field name="code">2660</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Intressivõlad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_23')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2690" model="account.account.template">
+            <field name="code">2690</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Muud viitvõlad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_23')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2691" model="account.account.template">
+            <field name="code">2691</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Muud palga viitvõlad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_25')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2710" model="account.account.template">
+            <field name="code">2710</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Lühiajalised eraldised</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_26')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2720" model="account.account.template">
+            <field name="code">2720</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="name">Ettelaekunud tulevaste perioodi tulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_19')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2810" model="account.account.template">
+            <field name="code">2810</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="name">Pikaajalised laenud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_21')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2820" model="account.account.template">
+            <field name="code">2820</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="name">Pikajalised võlakirjad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_21')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2830" model="account.account.template">
+            <field name="code">2830</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="name">Pikaajalised kapitalirendi kohustused</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_21')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2840" model="account.account.template">
+            <field name="code">2840</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="name">Pikaajalised konverteeritavad võlakohustused</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_21')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2850" model="account.account.template">
+            <field name="code">2850</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="name">Pikaajalised võlad emaattevõtjale ja teistele grupi ettevõtj</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_21')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2860" model="account.account.template">
+            <field name="code">2860</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="name">Pikaajalised võlad sidusettevõtjatele</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_21')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2870" model="account.account.template">
+            <field name="code">2870</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="name">Muud pikaajalised võlad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_21')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2880" model="account.account.template">
+            <field name="code">2880</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="name">Muud pikaajalised eraldised</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_27')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2910" model="account.account.template">
+            <field name="code">2910</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_equity"/>
+            <field name="name">Osa (aktsia)kapital </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_28')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2920" model="account.account.template">
+            <field name="code">2920</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_equity"/>
+            <field name="name">Ülekurss (aazio)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_29')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2930" model="account.account.template">
+            <field name="code">2930</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_equity"/>
+            <field name="name">Oma osad või aktsiad (miinus)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_30')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2940" model="account.account.template">
+            <field name="code">2940</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_equity"/>
+            <field name="name">Reservid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_31')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2941" model="account.account.template">
+            <field name="code">2941</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_equity"/>
+            <field name="name">Kohustuslik reservkapital</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_32')])]" name="tag_ids"/>
+        </record>
+        <record id="chart2950" model="account.account.template">
+            <field name="code">2950</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_equity"/>
+            <field name="name">Eelmiste perioodide jaotamata kasum (kahjum)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_33')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3100" model="account.account.template">
+            <field name="code">3100</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Kauba müük Eestis (km.20%)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_34')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3200" model="account.account.template">
+            <field name="code">3200</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Teenuste müük Eestis (km.20%)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_34')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3300" model="account.account.template">
+            <field name="code">3300</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Müük Eestis (km.9%)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_34')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3400" model="account.account.template">
+            <field name="code">3400</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Käibemaksuvaba käive</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_34')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3510" model="account.account.template">
+            <field name="code">3510</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Kauba müük EL (km.0%)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_34')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3520" model="account.account.template">
+            <field name="code">3520</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Teenuste müük EL (km.0%)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_34')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3530" model="account.account.template">
+            <field name="code">3530</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Kauba müük EL (km.20%)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_34')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3540" model="account.account.template">
+            <field name="code">3540</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Teenuste müük EL (km.20%)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_34')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3610" model="account.account.template">
+            <field name="code">3610</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Kauba eksport (km.0%)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_34')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3620" model="account.account.template">
+            <field name="code">3620</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Teenuste eksport (km.0%)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_34')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3810" model="account.account.template">
+            <field name="code">3810</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="name">Tulud mittepõhitegevusega seotud müügist (km.20%)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_35')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3820" model="account.account.template">
+            <field name="code">3820</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="name">Kasum põhivara müügist</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_35')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3830" model="account.account.template">
+            <field name="code">3830</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="name">Viivised ostjate arvetelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_35')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3840" model="account.account.template">
+            <field name="code">3840</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="name">Valuutakursikasum arveldustest ostjate ja tarnijatega</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_35')])]" name="tag_ids"/>
+        </record>
+        <record id="chart3990" model="account.account.template">
+            <field name="code">3990</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="name">Muud äritulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_35')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4000" model="account.account.template">
+            <field name="code">4000</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Varude jääkide muutus</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_36')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4100" model="account.account.template">
+            <field name="code">4100</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="name">Toore, materjalid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_37')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4110" model="account.account.template">
+            <field name="code">4110</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="name">EL-st ostetud toore, materjalid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_37')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4200" model="account.account.template">
+            <field name="code">4200</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="name">Müügiks ostetud kaubad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_37')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4210" model="account.account.template">
+            <field name="code">4210</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="name">EL-st ostetud kaubad</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_37')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4300" model="account.account.template">
+            <field name="code">4300</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="name">Ostetud teenused </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_37')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4310" model="account.account.template">
+            <field name="code">4310</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="name">Teenuste saamine (käibemaksuga maksustatav)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_37')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4400" model="account.account.template">
+            <field name="code">4400</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kasutusjuhendid, pakendid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4500" model="account.account.template">
+            <field name="code">4500</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kaubakäsitlusekulud ostul</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4510" model="account.account.template">
+            <field name="code">4510</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Tollikulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart4600" model="account.account.template">
+            <field name="code">4600</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Transpordikulud ostul</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5010" model="account.account.template">
+            <field name="code">5010</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Üürikulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5020" model="account.account.template">
+            <field name="code">5020</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kommunaalkulud (elekter,vesi,küte,haldus)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5030" model="account.account.template">
+            <field name="code">5030</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kontori (töökoja) korrashoid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5040" model="account.account.template">
+            <field name="code">5040</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kontori (töökoja) kindlustus</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5050" model="account.account.template">
+            <field name="code">5050</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kontori (töökoja) valvekulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5110" model="account.account.template">
+            <field name="code">5110</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kantseleitarbed, postikulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5120" model="account.account.template">
+            <field name="code">5120</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Väheväärtuslik kontoriinventar</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5130" model="account.account.template">
+            <field name="code">5130</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kontoriinventari hooldus ja remont</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5140" model="account.account.template">
+            <field name="code">5140</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Arvutite- ja võrgu hooldus</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5150" model="account.account.template">
+            <field name="code">5150</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Info ja õppematerjalid </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5160" model="account.account.template">
+            <field name="code">5160</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Perioodika</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5210" model="account.account.template">
+            <field name="code">5210</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Fikstelefonikulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5220" model="account.account.template">
+            <field name="code">5220</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Mobiiltelefoni kõned</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5230" model="account.account.template">
+            <field name="code">5230</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Internet</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5310" model="account.account.template">
+            <field name="code">5310</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Pangateenused</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5320" model="account.account.template">
+            <field name="code">5320</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Juriidilised kulud, lepingutasud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5330" model="account.account.template">
+            <field name="code">5330</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Riigilõivud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5340" model="account.account.template">
+            <field name="code">5340</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Konsultatsioonikulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5350" model="account.account.template">
+            <field name="code">5350</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Raamatupidanisteenused</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5410" model="account.account.template">
+            <field name="code">5410</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Reklaam </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5510" model="account.account.template">
+            <field name="code">5510</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Autokütus</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5520" model="account.account.template">
+            <field name="code">5520</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Auto hooldus ja remont</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5530" model="account.account.template">
+            <field name="code">5530</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Autokindlustus</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5540" model="account.account.template">
+            <field name="code">5540</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Isikliku auto kasutamise kompensatsatsioon</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5550" model="account.account.template">
+            <field name="code">5550</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Auto rent</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5610" model="account.account.template">
+            <field name="code">5610</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Lähetuskulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5620" model="account.account.template">
+            <field name="code">5620</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Personali täiendõpe</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5630" model="account.account.template">
+            <field name="code">5630</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Töökaitse ja töötervishoid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5640" model="account.account.template">
+            <field name="code">5640</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Erisoodustused</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5650" model="account.account.template">
+            <field name="code">5650</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Tulumaks erisoodustustelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5660" model="account.account.template">
+            <field name="code">5660</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Sotsiaalmaks erisoodustustelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5710" model="account.account.template">
+            <field name="code">5710</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Transpordi- ja saatekulud müügil</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5810" model="account.account.template">
+            <field name="code">5810</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Külaliste vastuvõtukulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5820" model="account.account.template">
+            <field name="code">5820</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Tulumaks vastuvõtukuludelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5910" model="account.account.template">
+            <field name="code">5910</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Ebatõenäolised nõuded</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5920" model="account.account.template">
+            <field name="code">5920</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Lootusetud nõuded</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5970" model="account.account.template">
+            <field name="code">5970</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Muud turustuskulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart5980" model="account.account.template">
+            <field name="code">5980</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Muud halduskulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_38')])]" name="tag_ids"/>
+        </record>
+        <record id="chart6010" model="account.account.template">
+            <field name="code">6010</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Palgakulu</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_39')])]" name="tag_ids"/>
+        </record>
+        <record id="chart6020" model="account.account.template">
+            <field name="code">6020</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Sotsiaalmaksu kulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_39')])]" name="tag_ids"/>
+        </record>
+        <record id="chart6030" model="account.account.template">
+            <field name="code">6030</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Töötuskindlustuse kulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_39')])]" name="tag_ids"/>
+        </record>
+        <record id="chart6040" model="account.account.template">
+            <field name="code">6040</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Pensionikulu</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_39')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7010" model="account.account.template">
+            <field name="code">7010</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="name">Kinnisvara investeeringu amortisatsioon</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_40')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7020" model="account.account.template">
+            <field name="code">7020</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="name">Ehitiste amortisatsioon</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_40')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7030" model="account.account.template">
+            <field name="code">7030</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="name">Masinate seadmete amortisatsioon</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_40')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7040" model="account.account.template">
+            <field name="code">7040</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="name">Muu põhivara amortisatsioon</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_40')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7100" model="account.account.template">
+            <field name="code">7100</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kahjum põhivara müügist</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_40')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7110" model="account.account.template">
+            <field name="code">7110</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kahjum kinnisvarainvesteeringute müügist</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_40')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7150" model="account.account.template">
+            <field name="code">7150</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Põhivara allahindlused</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_40')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7160" model="account.account.template">
+            <field name="code">7160</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Põhivara allahindluste tühistamised</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_40')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7200" model="account.account.template">
+            <field name="code">7200</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Ettevõtlusega mitteseotud kulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7210" model="account.account.template">
+            <field name="code">7210</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Maksuametile intressid</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7220" model="account.account.template">
+            <field name="code">7220</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Tulumaks ettevõtlusega mitteseotud kuludelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7230" model="account.account.template">
+            <field name="code">7230</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kingitused ja annetused</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7240" model="account.account.template">
+            <field name="code">7240</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Tulumaks kingitustelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7310" model="account.account.template">
+            <field name="code">7310</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Valuutakursikahjum arveldustest ostjate ja tarnijatega</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7410" model="account.account.template">
+            <field name="code">7410</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Maamaks</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7510" model="account.account.template">
+            <field name="code">7510</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Ühingute liikmemaksud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7610" model="account.account.template">
+            <field name="code">7610</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Trahvid ja viivised</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7910" model="account.account.template">
+            <field name="code">7910</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Muud ärikulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart7920" model="account.account.template">
+            <field name="code">7920</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Ümardamisvahed</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_41')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8100" model="account.account.template">
+            <field name="code">8100</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Finantstulud tütarettevõtjate aktsiatelt ja osadelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_42')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8110" model="account.account.template">
+            <field name="code">8110</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Finantskulud tütarettevõtjate aktsiatelt ja osadelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_42')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8200" model="account.account.template">
+            <field name="code">8200</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Finantstulud sidusettevõtjate aktsiatelt ja osadelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_43')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8210" model="account.account.template">
+            <field name="code">8210</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Finantskulud sidusettevõtjate aktsiatelt ja osadelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_43')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8300" model="account.account.template">
+            <field name="code">8300</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Finantstulud muudelt pikaajalistelt finantsinvesteeringutelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_44')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8310" model="account.account.template">
+            <field name="code">8310</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Finantskulud muudelt pikaajalistelt finantsinvesteeringutelt</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_45')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8400" model="account.account.template">
+            <field name="code">8400</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Intressitulud </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_46')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8401" model="account.account.template">
+            <field name="code">8401</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Intressitulud (KM vaba käive)</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_46')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8410" model="account.account.template">
+            <field name="code">8410</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Intressikulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_45')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8500" model="account.account.template">
+            <field name="code">8500</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Kasum valuutakursi muutustest</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_47')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8510" model="account.account.template">
+            <field name="code">8510</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Kahjum valuutakursi muutustest</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_47')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8600" model="account.account.template">
+            <field name="code">8600</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Muud finantstulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_48')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8610" model="account.account.template">
+            <field name="code">8610</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Muud finantskulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_48')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8700" model="account.account.template">
+            <field name="code">8700</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="name">Erakorralised tulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_48')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8800" model="account.account.template">
+            <field name="code">8800</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Erakorralised kulud</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_48')])]" name="tag_ids"/>
+        </record>
+        <record id="chart8888" model="account.account.template">
+            <field name="code">8888</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Tasaarveldused</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+        </record>
+        <record id="chart8889" model="account.account.template">
+            <field name="code">8889</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Konverteerimine</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+        </record>
+        <record id="chart8900" model="account.account.template">
+            <field name="code">8900</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="name">Dividendide tulumaks </field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field eval="[(6,0,[ref('account_tag_ee_49')])]" name="tag_ids"/>
+        </record>
+        <record id="chart9998" model="account.account.template">
+            <field name="code">9998</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_off_sheet"/>
+            <field name="name">Vahekonto</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+        </record>
+        <record id="chart9999" model="account.account.template">
+            <field name="code">9999</field>
+            <field eval="False" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_unaffected_earnings"/>
+            <field name="name">Kajastamata kasum/kahjum</field>
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+        </record>
+		<record id="estonian_chart_template" model="account.chart.template">
+            <field name="property_account_receivable_id" ref="chart1210"/>
+            <field name="property_account_payable_id" ref="chart2310"/>
+            <field name="property_account_expense_categ_id" ref="chart4100"/>
+            <field name="property_account_income_categ_id" ref="chart3100"/>
+            <field name="property_account_expense_id" ref="chart4100"/>
+            <field name="property_account_income_id" ref="chart3100"/>
+
+            <field name="property_stock_account_input_categ_id" ref="chart4000"/>
+            <field name="property_stock_account_output_categ_id" ref="chart4000"/>
+            <field name="property_stock_valuation_account_id" ref="chart1610"/>
+            <field name="property_tax_payable_account_id" ref="chart2510"/>
+            <field name="property_tax_receivable_account_id" ref="chart2510"/>
+            <field name="property_advance_tax_payment_account_id" ref="chart1520"/>
+            <field name="default_pos_receivable_account_id" ref="chart1210"/>
+
+            <field name="default_cash_difference_income_account_id" ref="chart7920"/>
+            <field name="default_cash_difference_expense_account_id" ref="chart7920"/>
+            <field name="income_currency_exchange_account_id" ref="chart8500"/>
+            <field name="expense_currency_exchange_account_id" ref="chart8510"/>
+        </record>
+	</data>
+</odoo>

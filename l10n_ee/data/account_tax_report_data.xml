@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_tax_report_line_emta_kmd" model="account.tax.report.line">
+            <field name="name">EMTA KMD</field>
+            <field name="sequence" eval="1"/>
+            <field name="country_id" ref="base.ee"/>
+        </record>
+
+        <!-- Kood 1 -->
+        <record id="account_tax_report_line_kood_1" model="account.tax.report.line">
+            <field name="name">1. 20% määraga maksustatavad toimingud ja tehingud</field>
+            <field name="tag_name">1. 20% määraga maksustatavad toimingud ja tehingud (alus)</field>
+            <field name="code">KOOD_1</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">transactions20</field>
+            <field name="emta_classifier_code">20</field>
+        </record>
+
+        <!-- Kood 2 -->
+        <record id="account_tax_report_line_kood_2" model="account.tax.report.line">
+            <field name="name">2. 9% määraga maksustatavad toimingud ja tehingud</field>
+            <field name="tag_name">2. 9% määraga maksustatavad toimingud ja tehingud (alus)</field>
+            <field name="code">KOOD_2</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">transactions9</field>
+            <field name="emta_classifier_code">9</field>
+        </record>
+
+        <!-- Kood 3 -->
+        <record id="account_tax_report_line_kood_3" model="account.tax.report.line">
+            <field name="name">3. 0% määraga maksustatavad toimingud ja tehingud</field>
+            <field name="tag_name">3. 0% määraga maksustatavad toimingud ja tehingud (alus)</field>
+            <field name="code">KOOD_3</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">transactionsZeroVat</field>
+        </record>
+
+        <record id="account_tax_report_line_kood_3_1" model="account.tax.report.line">
+            <field name="name">3.1 Kauba ühendusesisene käive ja teise liikmesriigi maksukohustuslasele/piiratud maksukohustuslasele osutatud teenuste käive kokku</field>
+            <field name="tag_name">3.1 Kauba ühendusesisene käive ja teise liikmesriigi maksukohustuslasele/piiratud maksukohustuslasele osutatud teenuste käive kokku (alus)</field>
+            <field name="code">KOOD_3_1</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_3"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">euSupplyInclGoodsAndServicesZeroVat</field>
+        </record>
+
+        <record id="account_tax_report_line_kood_3_1_1" model="account.tax.report.line">
+            <field name="name">3.1.1 Kauba ühendusesisene käive</field>
+            <field name="tag_name">3.1.1 Kauba ühendusesisene käive (alus)</field>
+            <field name="code">KOOD_3_1_1</field>
+            <field name="sequence" eval="60"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_3_1"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">euSupplyGoodsZeroVat</field>
+        </record>
+
+        <record id="account_tax_report_line_kood_3_2" model="account.tax.report.line">
+            <field name="name">3.2 Kauba eksport</field>
+            <field name="tag_name">3.2 Kauba eksport (alus)</field>
+            <field name="code">KOOD_3_2</field>
+            <field name="sequence" eval="70"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_3"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">exportZeroVat</field>
+        </record>
+
+        <record id="account_tax_report_line_kood_3_2_1" model="account.tax.report.line">
+            <field name="name">3.2.1 Käibemaksutagastusega müük reisijale</field>
+            <field name="tag_name">3.2.1 Käibemaksutagastusega müük reisijale (alus)</field>
+            <field name="code">KOOD_3_2_1</field>
+            <field name="sequence" eval="80"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_3_2"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">salePassengersWithReturnVat</field>
+        </record>
+
+        <!-- Kood 4 -->
+        <record id="account_tax_report_line_kood_4" model="account.tax.report.line">
+            <field name="name">4. Käibemaks kokku</field>
+            <field name="code">KOOD_4</field>
+            <field name="sequence" eval="90"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+        </record>
+
+        <record id="account_tax_report_line_km20" model="account.tax.report.line">
+            <field name="name">Käibemaks 20%</field>
+            <field name="tag_name">Käibemaks 20% (maks)</field>
+            <field name="code">KM20</field>
+            <field name="sequence" eval="100"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_4"/>
+            <field name="country_id" ref="base.ee"/>
+        </record>
+
+        <record id="account_tax_report_line_km9" model="account.tax.report.line">
+            <field name="name">Käibemaks 9%</field>
+            <field name="tag_name">Käibemaks 9% (maks)</field>
+            <field name="code">KM9</field>
+            <field name="sequence" eval="110"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_4"/>
+            <field name="country_id" ref="base.ee"/>
+        </record>
+
+        <!-- Kood 4^1 (eraldi) -->
+        <record id="account_tax_report_line_kood_4_1" model="account.tax.report.line">
+            <field name="name">4.1 Impordilt tasumisele kuuluv käibemaks (+)</field>
+            <field name="tag_name">4.1 Impordilt tasumisele kuuluv käibemaks (+) (maks)</field>
+            <field name="code">KOOD_4_1</field>
+            <field name="sequence" eval="120"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+        </record>
+
+        <!-- Kood 5 -->
+        <record id="account_tax_report_line_kood_5_F" model="account.tax.report.line">
+            <field name="name">5. Kokku sisendkäibemaksu summa, mis on seadusega lubatud maha arvata, sh (-)</field>
+            <field name="code">KOOD_5_F</field>
+            <field name="sequence" eval="130"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">inputVatTotal</field>
+            <field name="emta_sum_all_children" eval="True"/>
+        </record>
+
+        <record id="account_tax_report_line_kood_5" model="account.tax.report.line">
+            <field name="name">Sisendkäibemaksu summa, mis on seadusega lubatud maha arvata</field>
+            <field name="tag_name">5. Kokku sisendkäibemaksu summa, mis on seadusega lubatud maha arvata, sh (-) (maks)</field>
+            <field name="code">KOOD_5</field>
+            <field name="sequence" eval="140"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_5_F"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_infb" eval="True"/>
+        </record>
+
+        <record id="account_tax_report_line_kood_5_1" model="account.tax.report.line">
+            <field name="name">5.1 Impordilt tasutud või tasumisele kuuluv käibemaks</field>
+            <field name="tag_name">5.1 Impordilt tasutud või tasumisele kuuluv käibemaks (maks)</field>
+            <field name="code">KOOD_5_1</field>
+            <field name="sequence" eval="150"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_5_F"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">importVat</field>
+            <field name="emta_infb" eval="True"/>
+        </record>
+
+        <record id="account_tax_report_line_kood_5_2" model="account.tax.report.line">
+            <field name="name">5.2 Põhivara soetamiselt tasutud või tasumisele kuuluv käibemaks</field>
+            <field name="tag_name">5.2 Põhivara soetamiselt tasutud või tasumisele kuuluv käibemaks (maks)</field>
+            <field name="code">KOOD_5_2</field>
+            <field name="sequence" eval="160"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_5_F"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">fixedAssetsVat</field>
+            <field name="emta_infb" eval="True"/>
+        </record>
+
+        <record id="account_tax_report_line_kood_5_3" model="account.tax.report.line">
+            <field name="name">5.3 Ettevõtluses (100%) kasutatava sõiduauto soetamiselt ja sellise sõiduauto tarbeks kaupade soetamiselt ja teenuste saamiselt tasutud või tasumisele kuuluv käibemaks</field>
+            <field name="tag_name">5.3 Ettevõtluses (100%) kasutatava sõiduauto soetamiselt ja sellise sõiduauto tarbeks kaupade soetamiselt ja teenuste saamiselt tasutud või tasumisele kuuluv käibemaks (maks)</field>
+            <field name="code">KOOD_5_3</field>
+            <field name="sequence" eval="170"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_5_F"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">carsVat</field>
+            <field name="emta_include_vat_cars" eval="True"/>
+            <field name="emta_infb" eval="True"/>
+        </record>
+
+        <record id="account_tax_report_line_kood_5_4" model="account.tax.report.line">
+            <field name="name">	5.4 Osaliselt ettevõtluses kasutatava sõiduauto soetamiselt ja sellise sõiduauto tarbeks kaupade soetamiselt ja teenuste saamiselt tasutud või tasumisele kuuluv käibemaks</field>
+            <field name="tag_name">5.4 Osaliselt ettevõtluses kasutatava sõiduauto soetamiselt ja sellise sõiduauto tarbeks kaupade soetamiselt ja teenuste saamiselt tasutud või tasumisele kuuluv käibemaks (maks)</field>
+            <field name="code">KOOD_5_4</field>
+            <field name="sequence" eval="180"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_5_F"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">carsPartialVat</field>
+            <field name="emta_include_vat_cars_partial" eval="True"/>
+            <field name="emta_infb" eval="True"/>
+            <field name="emta_infb_code11" eval="True"/>
+        </record>
+
+        <!-- Kood 6 -->
+        <record id="account_tax_report_line_kood_6" model="account.tax.report.line">
+            <field name="name">6. Kauba ühendusesisene soetamine ja teise liikmesriigi maksukohustuslaselt saadud teenused kokku</field>
+            <field name="tag_name">6. Kauba ühendusesisene soetamine ja teise liikmesriigi maksukohustuslaselt saadud teenused kokku (alus)</field>
+            <field name="code">KOOD_6</field>
+            <field name="sequence" eval="190"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">euAcquisitionsGoodsAndServicesTotal</field>
+        </record>
+
+        <record id="account_tax_report_line_kood_6_1" model="account.tax.report.line">
+            <field name="name">6.1 Kauba ühendusesisene soetamine</field>
+            <field name="tag_name">6.1 Kauba ühendusesisene soetamine (alus)</field>
+            <field name="code">KOOD_6_1</field>
+            <field name="sequence" eval="200"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_6"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">euAcquisitionsGoods</field>
+        </record>
+
+        <!-- Kood 7 -->
+        <record id="account_tax_report_line_kood_7" model="account.tax.report.line">
+            <field name="name">7. Muu kauba soetamine ja teenuse saamine, mida maksustatakse käibemaksuga</field>
+            <field name="tag_name">7. Muu kauba soetamine ja teenuse saamine, mida maksustatakse käibemaksuga (alus)</field>
+            <field name="code">KOOD_7</field>
+            <field name="sequence" eval="210"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="emta_infa_code01" eval="True"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">acquisitionOtherGoodsAndServicesTotal</field>
+            <field name="emta_classifier_code">20erikord</field>
+        </record>
+
+        <record id="account_tax_report_line_kood_7_1" model="account.tax.report.line">
+            <field name="name">7.1 Erikorra alusel maksustatava kinnisasja, metallijäätmete, väärismetalli ja metalltoodete soetamine (KMS § 41¹)</field>
+            <field name="tag_name">7.1 Erikorra alusel maksustatava kinnisasja, metallijäätmete, väärismetalli ja metalltoodete soetamine (KMS § 41¹)</field>
+            <field name="code">KOOD_7_1</field>
+            <field name="sequence" eval="220"/>
+            <field name="parent_id" ref="account_tax_report_line_kood_7"/>
+            <field name="emta_infa_code01" eval="True"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">acquisitionImmovablesAndScrapMetalAndGold</field>
+            <field name="emta_classifier_code">20erikord</field>
+        </record>
+
+        <!-- Kood 8 -->
+        <record id="account_tax_report_line_kood_8" model="account.tax.report.line">
+            <field name="name">8. Maksuvaba käive</field>
+            <field name="tag_name">8. Maksuvaba käive</field>
+            <field name="code">KOOD_8</field>
+            <field name="sequence" eval="230"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">supplyExemptFromTax</field>
+        </record>
+
+        <!-- Kood 9 -->
+        <record id="account_tax_report_line_kood_9" model="account.tax.report.line">
+            <field name="name">9. Erikorra alusel maksustatava kinnisasja, metallijäätmete, väärismetalli ja metalltoodete käive (KMS § 41¹) ning teises liikmesriigis paigaldatava või kokkupandava kauba maksustatav väärtus</field>
+            <field name="tag_name">9. Erikorra alusel maksustatava kinnisasja, metallijäätmete, väärismetalli ja metalltoodete käive (KMS § 41¹) ning teises liikmesriigis paigaldatava või kokkupandava kauba maksustatav väärtus (alus)</field>
+            <field name="code">KOOD_9</field>
+            <field name="sequence" eval="240"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_infa_code01" eval="True"/>
+            <field name="emta_summary_name">supplySpecialArrangements</field>
+            <field name="emta_classifier_code">20erikord</field>
+        </record>
+
+        <!-- Kood 10 -->
+        <record id="account_tax_report_line_kood_10" model="account.tax.report.line">
+            <field name="name">10. Täpsustused (+)</field>
+            <field name="tag_name">10. Täpsustused (+)</field>
+            <field name="code">KOOD_10</field>
+            <field name="sequence" eval="250"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">adjustmentsPlus</field>
+        </record>
+
+        <!-- Kood 11 -->
+        <record id="account_tax_report_line_kood_11" model="account.tax.report.line">
+            <field name="name">11. Täpsustused (-)</field>
+            <field name="tag_name">11. Täpsustused (-)</field>
+            <field name="code">KOOD_11</field>
+            <field name="sequence" eval="260"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+            <field name="emta_summary_name">adjustmentsMinus</field>
+        </record>
+
+        <!-- Kood 12 -->
+        <record id="account_tax_report_line_kood_12" model="account.tax.report.line">
+            <field name="name">12. Tasumisele kuuluv käibemaks (lahter 4 + lahter 4¹ - lahter 5 + lahter 10 - lahter 11) (+)</field>
+            <field name="code">KOOD_12</field>
+            <field name="formula">KOOD_4 + KOOD_4_1 - KOOD_5_F + KOOD_10 - KOOD_11</field>
+            <field name="sequence" eval="270"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+        </record>
+
+        <!-- Kood 13 -->
+        <record id="account_tax_report_line_kood_13" model="account.tax.report.line">
+            <field name="name">13. Enammakstud käibemaks (lahter 4 + lahter 4¹ - lahter 5 + lahter 10 - lahter 11) (-)</field>
+            <field name="code">KOOD_13</field>
+            <field name="sequence" eval="280"/>
+            <field name="parent_id" ref="account_tax_report_line_emta_kmd"/>
+            <field name="country_id" ref="base.ee"/>
+        </record>
+    </data>
+</odoo>

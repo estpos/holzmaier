@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- TAX TEMPLATES -->
+
+        <!-- Käibemaks 20% -->
+        <record id="vat_out_20" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">MÜÜK-20</field>
+            <field name="description">KM 20%</field>
+            <field name="tax_group_id" ref="tax_group_20"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">10</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_km20')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_km20')],
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_out_20_service" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">MÜÜK-20-TEENUS</field>
+            <field name="description">KM 20%</field>
+            <field name="tax_group_id" ref="tax_group_20"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">20</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_km20')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_km20')],
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_20" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-20</field>
+            <field name="description">KM 20%</field>
+            <field name="tax_group_id" ref="tax_group_20"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">30</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_20_car" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-20-AUTO</field>
+            <field name="description">KM 20%</field>
+            <field name="tax_group_id" ref="tax_group_20"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">40</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_5_3')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_5_3')],
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_20_car_partial" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-20-AUTO-OSA</field>
+            <field name="description">KM 20%</field>
+            <field name="tax_group_id" ref="tax_group_20"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">50</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 50,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_5_4')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 50,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_5_4')],
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_20_asset" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-20-PV</field>
+            <field name="description">KM 20%</field>
+            <field name="tax_group_id" ref="tax_group_20"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">60</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_5_2')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_5_2')],
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_20_service" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-20-TEENUS</field>
+            <field name="description">KM 20%</field>
+            <field name="tax_group_id" ref="tax_group_20"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">70</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+            ]"/>
+        </record>
+
+        <!-- Käibemaks 9% -->
+        <record id="vat_out_9" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">MÜÜK-9</field>
+            <field name="description">KM 9%</field>
+            <field name="tax_group_id" ref="tax_group_9"/>
+            <field name="amount">9.0</field>
+            <field name="sequence">80</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_2')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_km9')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_2')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_km9')],
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_out_9_service" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">MÜÜK-9-TEENUS</field>
+            <field name="description">KM 9%</field>
+            <field name="tax_group_id" ref="tax_group_9"/>
+            <field name="amount">9.0</field>
+            <field name="sequence">90</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_2')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_km9')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_2')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_km9')],
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_9" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-9</field>
+            <field name="description">KM 9%</field>
+            <field name="tax_group_id" ref="tax_group_9"/>
+            <field name="amount">9.0</field>
+            <field name="sequence">100</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+            ]"/>
+        </record>
+
+        <!-- Käibemaks 0% -->
+        <record id="vat_out_0" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">MÜÜK-0</field>
+            <field name="description">KM 0%</field>
+            <field name="tax_group_id" ref="tax_group_0"/>
+            <field name="amount">0.0</field>
+            <field name="sequence">110</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_3')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_3')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_0" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-0</field>
+            <field name="description">KM 0%</field>
+            <field name="tax_group_id" ref="tax_group_0"/>
+            <field name="amount">0.0</field>
+            <field name="sequence">120</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_0_world" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-0-MAAILM</field>
+            <field name="tax_group_id" ref="tax_group_0"/>
+            <field name="amount">0.0</field>
+            <field name="sequence">130</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+            ]"/>
+        </record>
+
+        <!-- Eksport -->
+        <record id="vat_out_0_export" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">MÜÜK-0-EKSPORT</field>
+            <field name="description">Eksport</field>
+            <field name="tax_group_id" ref="tax_group_export"/>
+            <field name="amount">0.0</field>
+            <field name="sequence">140</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_3_2')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_3_2')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <!-- Maksuvaba käive -->
+        <record id="vat_out_exempt" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">MÜÜK-KM-VABA</field>
+            <field name="tax_group_id" ref="tax_group_exempt"/>
+            <field name="amount">0.0</field>
+            <field name="sequence">150</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_8')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_8')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <!-- EU VAT -->
+        <record id="vat_out_eu_0" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">MÜÜK-0-EU</field>
+            <field name="description">EU VAT 0%</field>
+            <field name="tax_group_id" ref="tax_group_eu_0"/>
+            <field name="amount">0.0</field>
+            <field name="sequence">160</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_3_1_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_3_1_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_out_eu_0_service" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">MÜÜK-0-EU-TEENUS</field>
+            <field name="description">EU VAT 0%</field>
+            <field name="tax_group_id" ref="tax_group_eu_0"/>
+            <field name="amount">0.0</field>
+            <field name="sequence">170</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_3_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_3_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_eu_20" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-20-EU</field>
+            <field name="description">EU VAT</field>
+            <field name="tax_group_id" ref="tax_group_eu"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">180</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_1'), ref('account_tax_report_line_kood_6_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+                (0,0, {
+                    'factor_percent': -100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_1'), ref('account_tax_report_line_kood_6_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+                (0,0, {
+                    'factor_percent': -100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_eu_20_service" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-20-EU-TEENUS</field>
+            <field name="description">EU VAT</field>
+            <field name="tax_group_id" ref="tax_group_eu"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">190</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_1'), ref('account_tax_report_line_kood_6_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+                (0,0, {
+                    'factor_percent': -100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_1'), ref('account_tax_report_line_kood_6_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_5')],
+                }),
+                (0,0, {
+                    'factor_percent': -100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <!-- Erikord -->
+        <record id="vat_out_20_asset_special" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">MÜÜK-§41</field>
+            <field name="description">KM 20% pöördmaksustamine</field>
+            <field name="tax_group_id" ref="tax_group_pkm"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">200</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_9')],
+                }),
+                (0,0, {
+                    'factor_percent': 0,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_9')],
+                }),
+                (0,0, {
+                    'factor_percent': 0,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <record id="vat_in_20_asset_special" model="account.tax.template">
+            <field name="chart_template_id" ref="estonian_chart_template"/>
+            <field name="name">OST-§41</field>
+            <field name="description">KM 20% pöördmaksustamine</field>
+            <field name="tax_group_id" ref="tax_group_pkm"/>
+            <field name="amount">20.0</field>
+            <field name="sequence">210</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'plus_report_line_ids': [ref('account_tax_report_line_kood_1'), ref('account_tax_report_line_kood_7_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 0,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                    'minus_report_line_ids': [ref('account_tax_report_line_kood_1'), ref('account_tax_report_line_kood_7_1')],
+                }),
+                (0,0, {
+                    'factor_percent': 0,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vat_cars_tree_view" model="ir.ui.view">
+            <field name="name">vat.cars.tree</field>
+            <field name="model">vat.cars</field>
+            <field name="arch" type="xml">
+                <tree string="Vat Cars List">
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="type"/>
+                    <field name="plate_number"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="vat_cars_form_view" model="ir.ui.view">
+            <field name="name">vat.cars.form</field>
+            <field name="model">vat.cars</field>
+            <field name="arch" type="xml">
+                <form string="Vat Cars List">
+                    <sheet>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="type"/>
+                            <field name="plate_number"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="vat_cars_action" model="ir.actions.act_window">
+            <field name="name">Vat Cars</field>
+            <field name="res_model">vat.cars</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">Add cars</p>
+            </field>
+        </record>
+
+        <menuitem id="vat_cars_menu"
+                  name="Vat Cars"
+                  parent="account.menu_finance_entries_actions"
+                  action="vat_cars_action"
+                  groups="account.group_account_manager"
+                  sequence="4"/>
+    </data>
+</odoo>

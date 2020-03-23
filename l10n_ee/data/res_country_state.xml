@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Eesti Maakonnad -->
+        <record id="tartu_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Tartu Maakond</field>
+            <field name="code">TRT</field>
+        </record>
+
+        <record id="harju_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Harju Maakond</field>
+            <field name="code">HAR</field>
+        </record>
+
+        <record id="ida_viru_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Ida-Viru Maakond</field>
+            <field name="code">IDV</field>
+        </record>
+
+        <record id="parnu_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Pärnu Maakond</field>
+            <field name="code">PÄR</field>
+        </record>
+
+        <record id="laane_viru_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Lääne-Viru Maakond</field>
+            <field name="code">LÄV</field>
+        </record>
+
+        <record id="viljandi_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Viljandi Maakond</field>
+            <field name="code">VIL</field>
+        </record>
+
+        <record id="rapla_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Rapla Maakond</field>
+            <field name="code">RAP</field>
+        </record>
+
+        <record id="voru_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Voru Maakond</field>
+            <field name="code">VÕR</field>
+        </record>
+
+        <record id="saare_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Saare Maakond</field>
+            <field name="code">SAA</field>
+        </record>
+
+        <record id="jogeva_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Jõgeva Maakond</field>
+            <field name="code">JÕG</field>
+        </record>
+
+        <record id="jarva_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Järva Maakond</field>
+            <field name="code">JÄR</field>
+        </record>
+
+        <record id="valga_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Valga Maakond</field>
+            <field name="code">VAL</field>
+        </record>
+
+        <record id="polva_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Põlva Maakond</field>
+            <field name="code">PÕL</field>
+        </record>
+
+        <record id="laane_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Lääne Maakond</field>
+            <field name="code">LÄÄ</field>
+        </record>
+
+        <record id="hiiu_maakond" model="res.country.state">
+            <field name="country_id" ref="base.ee"/>
+            <field name="name">Hiiu Maakond</field>
+            <field name="code">HII</field>
+        </record>
+
+    </data>
+</odoo>

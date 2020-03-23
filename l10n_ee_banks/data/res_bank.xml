@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        
+        <record id="res_bank_eestipank" model="res.bank">
+            <field name="bic">EPBEEE2X</field>
+            <field name="name">Eesti Pank</field>
+            <field name="iban_id_code">16</field>
+        </record>
+
+        <record id="res_bank_citadele" model="res.bank">
+            <field name="bic">PARXEE22</field>
+            <field name="name">AS Citadele banka Eesti filiaal</field>
+            <field name="iban_id_code">12</field>
+        </record>
+
+        <record id="res_bank_versobank" model="res.bank">
+            <field name="bic">SBMBEE22</field>
+            <field name="name">Versobank AS</field>
+            <field name="iban_id_code">55</field>
+        </record>
+
+        <record id="res_bank_danske" model="res.bank">
+            <field name="bic">FOREEE2X</field>
+            <field name="name">Danske Bank A/S Eesti filiaal</field>
+            <field name="iban_id_code">33</field>
+        </record>
+
+        <record id="res_bank_handelsbanken" model="res.bank">
+            <field name="bic">HANDEE22</field>
+            <field name="name">Svenska Handelsbanken</field>
+            <field name="iban_id_code">83</field>
+        </record>
+
+        <record id="res_bank_tln_aripank" model="res.bank">
+            <field name="bic">TABUEE22</field>
+            <field name="name">Tallinna Äripanga AS</field>
+            <field name="iban_id_code">00</field>
+        </record>
+
+        <record id="res_bank_op_corporate_bank" model="res.bank">
+            <field name="bic">OKOYEE2X</field>
+            <field name="name">OP Corporate Bank plc Eesti filiaal</field>
+            <field name="iban_id_code">51</field>
+        </record>
+
+        <record id="res_bank_bigbank" model="res.bank">
+            <field name="bic">BIGKEE2B</field>
+            <field name="name">BIGBANK AS</field>
+            <field name="iban_id_code">75</field>
+        </record>
+
+        <record id="res_bank_swedbank" model="res.bank">
+            <field name="bic">HABAEE2XXXX</field>
+            <field name="name">Swedbank AS</field>
+            <field name="iban_id_code">22</field>
+        </record>
+
+        <record id="res_bank_nordea" model="res.bank">
+            <field name="bic">NDEAEE2XXXX</field>
+            <field name="name">Nordea Bank AB Eesti filiaal</field>
+            <field name="iban_id_code">17</field>
+        </record>
+
+        <record id="res_bank_krediidipank" model="res.bank">
+            <field name="bic">EKRDEE22XXX</field>
+            <field name="name">AS Eesti Krediidipank</field>
+            <field name="iban_id_code">42</field>
+        </record>
+
+        <record id="res_bank_seb" model="res.bank">
+            <field name="bic">EEUHEE2XXXX</field>
+            <field name="name">AS SEB Pank</field>
+            <field name="iban_id_code">10</field>
+        </record>
+
+        <record id="res_bank_lhv" model="res.bank">
+            <field name="bic">LHVBEE22</field>
+            <field name="name">AS LHV Pank</field>
+            <field name="iban_id_code">77</field>
+            <field name="city">Tallinn</field>
+            <field name="country" ref="base.ee"/>
+            <field name="street">Tartu mnt 2</field>
+            <field name="zip">10145</field>
+        </record>
+
+        <record id="res_bank_dnb" model="res.bank">
+            <field name="bic">RIKOEE22</field>
+            <field name="name">DNB Pank</field>
+            <field name="iban_id_code">96</field>
+            <field name="city">Tallinn</field>
+            <field name="country" ref="base.ee"/>
+            <field name="street">Tartu mnt 10</field>
+            <field name="zip">10145</field>
+        </record>
+
+    </data>
+</openerp>
